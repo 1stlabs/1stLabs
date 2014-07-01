@@ -1,0 +1,477 @@
+/*
+ Theme Name:   Canvas Child
+ Theme URI:    http://example.com/twenty-fourteen-child/
+ Description:  Canvas Child Theme
+ Author:       John Doe
+ Author URI:   http://example.com
+ Template:     canvas
+ Version:      1.0.0
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  canvas-child-theme
+*/
+
+@import "../canvas/style.css";
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+
+/* UNIVERSAL STYLES 
+=================================================================*/
+#wpadminbar, .nav-toggle{
+	display: none;
+}
+
+html {
+	margin-top: 0 !important;
+	height: auto !important;
+}
+
+body {
+	font-family: arial, helvetica, sans-serif;
+	background-color: #fff;
+	height: auto !important;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.center {
+	float: right;
+	position: relative;
+	left: -50%;
+	margin-top: 10px;
+}
+
+#wrapper {
+	overflow-x: visible;
+}
+
+@font-face {
+    font-family: 'sansationregular';
+    src: url('fonts/sansation_regular-webfont.eot');
+    src: url('fonts/sansation_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/sansation_regular-webfont.woff') format('woff'),
+         url('fonts/sansation_regular-webfont.ttf') format('truetype'),
+         url('fonts/sansation_regular-webfont.svg#sansationregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'sansationbold';
+    src: url('fonts/sansation_bold-webfont.eot');
+    src: url('fonts/sansation_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/sansation_bold-webfont.woff') format('woff'),
+         url('fonts/sansation_bold-webfont.ttf') format('truetype'),
+         url('fonts/sansation_bold-webfont.svg#sansationbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'sansation_lightregular';
+    src: url('fonts/sansation_light-webfont.eot');
+    src: url('fonts/sansation_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/sansation_light-webfont.woff') format('woff'),
+         url('fonts/sansation_light-webfont.ttf') format('truetype'),
+         url('fonts/sansation_light-webfont.svg#sansation_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* HEADER STYLES 
+=================================================================*/
+.bg {
+	background-color: #dcdcdc;
+	height: 100px;
+	width: 100%;
+	border-bottom: 2px solid #404041;
+	position: fixed;
+	z-index: 10;
+}
+
+.header {
+	position: fixed;
+	z-index: 11;
+	width: 100%;
+}
+@media (min-width: 768px) {
+	.header {
+		width: 80%;
+	}
+}
+
+.main_logo {
+	float: left;
+	background: url('images/main_logo.png') no-repeat;
+	text-indent: -9999px;
+	height: 60px;
+	width: 66%;
+	margin-top: 20px;
+	position: fixed;
+	z-index: 12;
+	margin-left: 17%;
+}
+@media (min-width: 768px) {
+	.main_logo {
+		width: 264px;
+		margin-left: 0px;
+	}
+}
+
+.menu {
+	float: left;
+	margin-top: 102px;
+	width: 100%;
+	background-color: #dcdcdc;
+}
+@media (min-width: 768px) {
+	.menu {
+		float: right;
+		width: inherit;
+		margin-top: 21px;
+	}
+}
+
+.menu > li{
+	padding: 10px 0;
+	border-bottom: 2px solid #404041;
+	text-align: center;
+}
+@media (min-width: 768px) {
+	.menu > li{
+		float: left;
+		border-bottom: none;
+	}
+}
+
+.menu > li > a {
+	padding: 20px 10px;
+	font-size: 18px;
+	color: #404041;
+}
+@media (min-width: 768px) {
+	.menu > li > a {
+		width: inherit;
+	}
+}
+
+@media (min-width: 768px) {
+	.menu > li:hover{
+		border-bottom: 2px solid #00679e;
+	}
+
+	.active {
+		border-bottom: 2px solid #00679e !important;
+	}
+}
+
+/* HERO CONTENT STYLES 
+=================================================================*/
+
+.hero_section {
+	background: url('images/hero.jpg') no-repeat center bottom;
+	width: 100%;
+	height: 93px;
+	background-size: 100%;
+	padding-top: 425px;
+	clear: both;
+}
+@media (min-width: 768px) {
+	.hero_section {
+		background-size: cover;
+		height: 583px;
+		padding-top: 160px;
+	}
+}
+
+.site_title, .site_description {
+	color: #fff;
+	font-size: 30px;
+	width: 100%;
+	text-align: center;
+	font-family: 'sansationregular', arial, sans-serif;
+}
+
+.site_title {
+	margin-top: -72px;
+}
+@media (min-width: 768px) {
+	.site_title {
+		margin-top: 115px;
+		font-size: 80px;
+	}
+}
+
+.site_description {
+	font-size: 13px;
+	width: 90%;
+	margin-left: 5%;
+	line-height: 12px
+}
+@media (min-width: 768px) {
+	.site_description {
+		font-size: 16px;
+		width: 35%;
+		margin-left: 32.5%;
+	}
+}
+
+a.learn_more_btn {
+	display: inline-block;
+	width: 200px;
+	background: #00679e;
+	font-family: "Arial Black", Gadget, sans-serif;
+	color: #fff;
+	text-align: center;
+	padding: 10px 0;
+	border-radius: 7px;
+	margin: 0 auto;
+	position: relative;
+	left: 50%;
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	-ms-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+}
+a.learn_more_btn:hover {
+	background: #005f92;
+}
+
+
+/* about CONTENT STYLES 
+=================================================================*/
+.about_section {
+	padding-top: 290px;
+	padding-bottom: 100px;
+	border-bottom: 2px solid #ccc;
+	width: 80%;
+	margin-left: 10%;
+}
+@media (min-width: 768px) {
+	.about_section {
+		padding-top: 140px;
+	}
+}
+
+.section_title {
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 30px;
+}
+
+.about_para {
+	width: 100%;
+}
+@media (min-width: 768px) {
+	.about_para {
+		width: 75%;
+		margin-left: 12.5%;
+	}
+}
+
+/* What we offer  STYLES 
+=================================================================*/
+
+.wwo_section {
+	padding-top: 290px;
+	width: 95;
+	overflow: auto;
+}
+@media (min-width: 768px) {
+	.wwo_section {
+		padding-top: 140px;
+	}
+}
+
+.wwo_content_section {
+	width: 100%;
+	float: left;
+	margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+	.wwo_content_section {
+		width: 33%;
+	}
+}
+
+.wwo_section_title{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 30px;
+	font-weight: 300;
+	color: #00679e;
+}
+
+.wwo_section_img {
+	width: 50%;
+	margin-left: 25%;
+	margin-bottom: 20px;
+}
+
+.wwo_section_para {
+	width: 70%;
+	margin-left: 12.5%;
+	text-align: center;
+	font-family: georgia, serif;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+/* contact  STYLES 
+=================================================================*/
+.contact_section {
+	border-top: 2px solid #404041;
+	background-color: #dcdcdc;
+	height: 500px;
+	clear: both;
+	padding-top: 250px;
+}
+@media (min-width: 768px) {
+	.contact_section {
+		padding-top: 100px;
+	}
+}
+
+.rounded {
+	font-family: 'sansationregular', arial, sans-serif !important;
+	font-size: 48px !important;
+	width: 100% !important;
+	text-align: center !important;
+	color: #00679e !important;
+	float: left !important;
+}
+
+form {
+	width: 90%;
+	margin-left: 5%;
+}
+
+@media (min-width: 768px) {
+	form {
+		width: 50%;
+		margin-left: 25%;
+	}
+}
+.gform_wrapper li, .gform_wrapper form li {
+	float: left;
+	width: 100%;
+}
+@media (min-width: 768px) {
+	.gform_wrapper li, .gform_wrapper form li {
+		width: 45%;
+	}
+}
+.gform_wrapper input, #input_3_4 {
+	border: none;
+	border-radius: 10px;
+	color: #ababab;
+	width: 277px;
+	height: 25px;
+	padding-left: 10px !important; 
+	width: 100% !important;
+	float: left !important;
+	margin-bottom: 15px!important;
+}
+
+#input_3_4 {
+	width: 100% !important;
+	height: 143px;
+}
+@media (min-width: 768px) {
+	#input_3_4 {
+		margin-top: -177px;
+		float: right;
+		margin-left: 110%;
+		
+	}
+}
+
+.gfield {
+	margin-bottom: -15px;
+}
+
+#gform_submit_button_1, #gform_submit_button_3{
+	width: 40% !important;
+	margin-left: 30%;
+	height: 30px;
+	background: #00679e;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 0 0 rgba(0,0,0,0) !important;
+	-moz-box-shadow: 0 0 0 rgba(0,0,0,0) !important;
+	-ms-box-shadow: 0 0 0 rgba(0,0,0,0) !important;
+	-o-box-shadow: 0 0 0 rgba(0,0,0,0) !important;
+	box-shadow: 0 0 0 rgba(0,0,0,0) !important;
+	-webkit-transition: .2s;
+	-moz-transition: .2s;
+	-ms-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s;
+}
+
+#gform_submit_button_1:hover, #gform_submit_button_3:hover {
+	width: 45% !important;
+	margin-left: 27.5%;
+}
+
+/* footer  STYLES 
+=================================================================*/
+
+#footer {
+	background: #404041;
+}
+
+.footer_address {
+	color: #fff !important;
+	font-size: 14px;
+	display: inline-block;	
+	margin-left: 20px;
+}
+
+.footer_logo {
+	float: right;
+	margin-right: 20px;
+}
+
+.first_labs {
+	clear: both;
+	float: right;
+	color: #fff;
+	font-size: 14px;
+	margin-right: 20px;
+}
+
+.first_labs > a {
+	color: #00679e;
+}
+
+@media (min-width: 768px) {
+	.footer_address, .footer_logo, .first_labs  {
+		margin: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
